@@ -25,7 +25,7 @@ df = load_data(DATA_PATH)
 st.set_page_config(page_title="HDB Resale Dashboard", layout="wide")
 
 st.title("🏠 Singapore HDB Resale Dashboard")
-# st.caption("Code-along: building a usable dashboard from real resale transactions.")
+st.caption("Code-along: building a usable dashboard from real resale transactions.")
 
 # st.header("Dashboard Overview")
 # st.subheader("What this app will show")
@@ -127,6 +127,7 @@ with col_left:
     )
     fig_town = px.bar(avg_price_by_town, x="town", y="resale_price")
     st.plotly_chart(fig_town, width="stretch")
+    # st.pyplot()
 
 # Tells Streamlit to put the following content in the right column
 with col_right:
